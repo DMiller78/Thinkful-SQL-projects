@@ -1,3 +1,5 @@
+Question 3b: What about the busiest?
+
 SELECT 
     available, 
     calender_date, 
@@ -10,4 +12,6 @@ GROUP BY
     calender_date, 
     available
 ORDER BY 
-    rooms DESC
+    rooms ASC
+    
+    # In December 12/12/2018 there were 2678 rooms available. The busiest time of the year. 
