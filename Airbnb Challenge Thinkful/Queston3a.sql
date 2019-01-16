@@ -1,11 +1,18 @@
+# Question 3a: What time of year is the cheapest time to go to San Francisco? 
+
 SELECT 
-	neighbourhood,
-	COUNT(*)
+    available, 
+    calender_date, 
+    price
 FROM 
-	sfo_listings
-JOIN 
     sfo_calendar
-ON 
-    sfo_listings.id = sfo_calendar.listing_id
-GROUP BY sfo_listings.neighbourhood
-ORDER BY COUNT(*) DESC;
+WHERE
+    available = 't'
+GROUP BY
+    calender_date, 
+    available, 
+    price
+ORDER BY 
+    price ASC
+    
+    # The cheapest month to visit SF is in September. 
